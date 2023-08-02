@@ -1,86 +1,131 @@
 
-
-
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
 .nav > button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
+
 .nav__menu {
-  display: block;
-  font-size: 0;
-  width: 40px;
-  height: 40px;
-  z-index: 11;
-  position: relative;
+    display: block;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 11;
+    position: relative;
+
 }
 
 .nav__span {
-  width: 35px;
-  height: 5px;
-  display: block;
-  border-radius: 2px;
-  background-color: #93C10E;
-  position: relative;
+    width: 35px;
+    height: 5px;
+    display: block;
+    border-radius: 2px;
+    background-color: var(--lime);
+    position: relative;
+    transition: all 0.05s ease-in-out;
 }
+
 .nav__span::after {
-  content: "";
-  width: 30px;
-  height: 5px;
-  border-radius: 2px;
-  display: block;
-  background-color: #93C10E;
-  position: absolute;
-  top: 13px;
+    content: "";
+    width: 30px;
+    height: 5px;
+    border-radius: 2px;
+    display: block;
+    background-color: var(--lime);
+    position: absolute;
+    top: 13px;
+
 }
+
 .nav__span::before {
-  content: "";
-  width: 35px;
-  height: 5px;
-  border-radius: 2px;
-  display: block;
-  background-color: #93C10E;
-  position: absolute;
-  top: -12px;
-}
-.nav__sales{
-  background-color: #FFC709 !important;
-  padding: 7px 9px;
-  border-radius: 6px;
-}
-.nav__list{
+    content: "";
+    width: 35px;
+    height: 5px;
+    border-radius: 2px;
+    display: block;
+    background-color: var(--lime);
+    position: absolute;
+    top: -12px;
 
-  position: absolute;
-  left: 0;
-  top: 70px;
+}
 
-  background-color: #ffffff;
-  width: 100%;
-  height: calc(100vh - 70px);
+.nav__menuActive > .nav__span:after {
+    background-color: var(--black);
+    transform: rotate(45deg);
+    width: 35px;
+    top: -5px;
+
 }
-.nav__text{
-  margin-top: 35px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+.nav__menuActive > .nav__span:before {
+    background-color: var(--black);
+    transform: rotate(-45deg);
+    top:-5px;
 }
+.nav__menuActive > .nav__span{
+    height: 0;
+}
+
+.nav__sales {
+    background-color: var(--yellow) !important;
+    padding: 7px 9px;
+    border-radius: 6px;
+}
+
+.nav__list {
+    /*display: none;*/
+    position: absolute;
+    left: -280px;
+    bottom: 0;
+    /*width: 0;*/
+    top: 70px;
+
+    background-color: var(--white);
+
+    transition: all 1s linear;
+    height: calc(100vh - 70px);
+    user-select: none;
+
+}
+
+.nav__active {
+    display: block;
+    right: 0;
+    left:0;
+    width: 100%;
+    transition: all 1s linear;
+}
+
+.nav__text {
+    margin-top: 35px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+}
+
 .nav__item {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.1);
 
-  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-
-  padding: 5px;
+    padding: 5px;
 }
 
-.nav__link{
-  display: flex;
-  align-items: center;
+.nav__link {
+    display: flex;
+    align-items: center;
 }
-.nav__name{
-  padding-left: 15px;
+.nav__link:active{
+    background-color: var(--lime);
+}
+
+.nav__name {
+    padding-left: 15px;
+    text-transform: lowercase;
+}
+.nav__name::first-letter{
+    text-transform: uppercase;
 }

@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
+import Search from "@/components/UI/Search";
 
 export default function Home() {
   return (
@@ -11,9 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <div className="container">
-          <h1>main content</h1>
-        </div>
+          <div >
+          <Search/>
+          </div>
       </Layout>
     </>
   );

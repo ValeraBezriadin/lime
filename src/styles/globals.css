@@ -1,8 +1,15 @@
 :root {
-  --white: #fff;
-  --text: 16px;
-}
 
+  --text: 16px;
+  --black: black;
+  --white: #fff;
+  --lime: #93C10E;
+  --yellow: #FFC709;
+  --grey:#F1F1F1;
+}
+form, label, input {
+  font-size: var(--text);
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -38,6 +45,7 @@ ul{
 }
 main{
   min-height: 100vh;
+
 }
 /*@media (prefers-color-scheme: dark) {*/
 /*  html {*/

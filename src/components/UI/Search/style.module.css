@@ -1,0 +1,31 @@
+.search__label{
+    width: 100%;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+}
+
+.search__label:before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 15px;
+    top: 40px;
+    background-image: url("../../../static/searchIcon.svg");
+
+}
+.search__input{
+    width: 100%;
+    background-color: var(--grey) ;
+    padding: 10px 45px 10px 10px;
+    border: none;
+    border-radius: 10px;
+}
+.search__input:focus{
+    border: none;
+    outline: none;
+}

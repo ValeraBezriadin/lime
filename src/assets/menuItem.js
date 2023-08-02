@@ -39,7 +39,7 @@ export const menuItem = [
   },
   {
     id: 4,
-    name: "Мясо и рыба",
+    name: "Мясо и РЫба",
     imageUrl:  stake ,
     slug: "/stake",
   },
