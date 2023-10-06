@@ -5,7 +5,12 @@
   --white: #fff;
   --lime: #93C10E;
   --yellow: #FFC709;
-  --grey:#F1F1F1;
+  --lightGray:#F1F1F1;
+  --orange:#FF5C00;
+  --grey: rgba(51, 51, 51, 1);
+  --productGradient :linear-gradient(90deg, #FFA800 0%, #FFC709 100%), #A1D214;
+  --recip-filter:rgb(0,0,0,30%);
+
 }
 form, label, input {
   font-size: var(--text);
@@ -20,6 +25,11 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
 a {
@@ -38,7 +48,7 @@ ul{
 }
 
 .container{
-  max-width: 1300px;
+  max-width: 1920px;
   width: 100%;
   padding: 0 10px;
   margin: 0 auto;
@@ -52,5 +62,45 @@ main{
 /*    color-scheme: dark;*/
 /*  }*/
 /*}*/
-
-
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+  url('../static/fonts/Montserrat-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+  url('../static/fonts/Montserrat-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+  url('../static/fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+  background-color: var(--white);
+  height: 50px;
+  width: 20px ;
+  border-radius: 5px ;
+  font-size: 20px !important;
+  line-height: 50px !important;
+  color: black;
+ text-align: center;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--black) !important;
+}
+@media screen and (min-width: 768px){
+  .logo {
+    order: -1;
+  }
+}

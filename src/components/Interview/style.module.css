@@ -1,0 +1,62 @@
+.interview{
+    background-image: url("../../static/interview/coker.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    object-position: bottom center;
+    border-radius: 10px;
+    height: 240px;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.interview__inner{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    width: 100%;
+}
+.interview__title{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--white);
+    max-width: 140px;
+    width: 100%;
+}
+.interview__text{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--white);
+    opacity: 0.7;
+    max-width: 170px;
+    width: 100%;
+}
+.interview__title:first-letter{
+    text-transform:uppercase;
+}
+.interview__text:first-letter{
+    text-transform:uppercase;
+}
+
+.interview__link_inner {
+
+    border-radius: 30px;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid white;
+}
+.interview__img {
+    background-color: rgb(255, 255, 255, 30%);
+    border-radius: 30px;
+    display: block;
+}
+.interview__subtitle{
+    margin-bottom: 10px;
+}
+

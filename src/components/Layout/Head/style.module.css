@@ -4,6 +4,8 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    z-index: 3;
+    order: 1;
 }
 
 .nav > button {
@@ -73,15 +75,38 @@
 }
 
 .nav__sales {
-    background-color: var(--yellow) !important;
+    display: flex;
+    align-items: center;
+
+}
+.nav__sales_wrapper{background-color: var(--yellow) !important;
     padding: 7px 9px;
     border-radius: 6px;
 }
-
+.nav__sales_text{
+    display: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 10px;
+    position: relative;
+}
+.nav__sales_text:before{
+    content: "";
+    position: absolute;
+    left: 68px;
+    top: 0;
+    background-image: url("./../../../static/downArrow.svg");
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .nav__list {
     /*display: none;*/
     position: absolute;
-    left: -280px;
+    left: -340px;
     bottom: 0;
     /*width: 0;*/
     top: 70px;
@@ -97,9 +122,10 @@
 .nav__active {
     display: block;
     right: 0;
-    left:0;
+    left: 0;
     width: 100%;
     transition: all 1s linear;
+
 }
 
 .nav__text {
@@ -128,4 +154,61 @@
 }
 .nav__name::first-letter{
     text-transform: uppercase;
+}
+.nav__menu:before{
+    display: none;
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 9px;
+    background-image: url("./../../../static/loping.svg");
+    width: 24px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav__textBtn{
+    font-size: 0;
+}
+@media screen and (min-width: 992px){
+    .nav__active{
+        width: 350px;
+        left: -15px;
+        transition: all 0.7s linear;
+    }
+    .header{
+        padding: 15px;
+    }
+}
+@media screen and (min-width: 1068px)  {
+    .nav__menu {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        background-color: var(--lime ) !important;
+        border-radius:10px;
+        padding: 0 20px 0 55px;
+        width: 135px;
+        position: relative;
+
+    }
+    .nav__span{
+        display: none;
+    }
+    .nav__menu:before{
+        display: block;
+    }
+    .nav__sales_text{
+        display: block;
+    }
+    .nav__button{
+        display: flex;
+        align-items: center;
+    }
+    .nav__textBtn{
+        font-size: 14px;
+        font-weight: 700;
+        padding-left: 10px;
+    }
 }

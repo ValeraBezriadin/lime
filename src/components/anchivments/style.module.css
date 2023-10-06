@@ -1,0 +1,55 @@
+.achivments__list{
+    display: flex;
+
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+}
+.achivments__item{
+    padding-top: 50px;
+    position: relative;
+}
+.achivments__text{
+    text-align: center;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 60px;
+}
+.achivments__item:after{
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 34px;
+    background-color: rgba(161, 210, 20, 0.3);
+    top: 5px;
+    right: 0;
+
+}
+.achivments__item:before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.achivments__first:before{
+    background-image: url("../../static/achivments/chef.svg");
+}
+.achivments__second:before{
+    background-image: url("../../static/achivments/receptionbel.svg");
+}
+.achivments__third:before{
+    background-image: url("../../static/achivments/recommended.svg");
+}
+.achivments__fourth:before{
+    background-image: url("../../static/achivments/reservation.svg");
+}

@@ -6,7 +6,7 @@ import logo from "@/static/logo.svg";
 const Logo = () => {
   return (
     <>
-      <Link href={"/"}>
+      <Link className={"logo"} href={"/"}>
         <Image src={logo} width={107} height={71} alt="logo" />
       </Link>
     </>

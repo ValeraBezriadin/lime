@@ -20,7 +20,7 @@
 }
 .search__input{
     width: 100%;
-    background-color: var(--grey) ;
+    background-color: var(--lightGray) ;
     padding: 10px 45px 10px 10px;
     border: none;
     border-radius: 10px;
