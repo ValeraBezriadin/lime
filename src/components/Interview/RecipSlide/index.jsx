@@ -15,7 +15,7 @@ const RecipSlide = () => {
         <article className={css.recipSlider}>
             <h2 className={css.recipSlider__title}>{title}</h2>
             <div className={css.recipSlider__inner}>
-                <Image className={css.recipSlider__img} src={imgUrl} alt={title||"alt"} width={340} height={240}/>
+                <Image className={css.recipSlider__img} src={imgUrl} alt={title||"alt"} width={340} />
                 <div className={css.recipSlider__info}>
                     <span className={css.recipSlider__text + " " + css.recipSlider__text_time}>{time} минут</span>
                     <span

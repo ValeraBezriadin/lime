@@ -8,7 +8,7 @@ import registrate from "@/static/registrate.svg";
 import Image from "next/image";
 import {menuItem} from "@/assets/menuItem";
 import Link from "next/link";
-
+import Cart from "@/components/Layout/Head/Cart"
 const Head = () => {
 
     const [menuActive, setMenuActive] = useState(false)
@@ -59,10 +59,7 @@ const Head = () => {
                             <Image src={like} width={30} height={30} alt="like"/>
                             <span className={css.nav__textBtn}>Улюблене</span>
                         </button>
-                        <button className={css.nav__button}>
-                            <Image src={cart} width={30} height={30} alt="cart"/>
-                            <span className={css.nav__textBtn}>Корзина</span>
-                        </button>
+                        <Cart/>
                         <ul className={menuActive ? css.nav__list + " " + css.nav__active : css.nav__list}>
                             <p className={css.nav__text}>Выберите категорию</p>
                             {menuItem.map((i) => (

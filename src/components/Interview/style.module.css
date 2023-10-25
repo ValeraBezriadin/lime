@@ -1,3 +1,4 @@
+
 .interview{
     background-image: url("../../static/interview/coker.png");
     background-repeat: no-repeat;
@@ -5,7 +6,7 @@
     object-fit: cover;
     object-position: bottom center;
     border-radius: 10px;
-    height: 240px;
+    height: 540px;
     display: flex;
     align-items: flex-end;
 }
@@ -60,3 +61,49 @@
     margin-bottom: 10px;
 }
 
+@media screen and (min-width: 630px){
+    .recips {
+        display: flex;
+        gap: 10px;
+    }
+    .interview{
+        height:400px;
+
+    }
+    .recip__wrapper{
+        max-width: 400px;
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 700px){
+    .recip__wrapper{
+        max-width: 440px;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px){
+    .recip__wrapper{
+        max-width: 520px;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 840px){
+    .recip__wrapper{
+        max-width: 580px;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 900px){
+    .recip__wrapper{
+        max-width: 70vw;
+        width: 100%;
+    }
+}
+@media screen and (min-width:1300px){
+    .recip__wrapper{
+        max-width: 1000px;
+        width: 100%;
+    }
+}

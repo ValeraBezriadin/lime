@@ -15,7 +15,7 @@ const News = () => {
                             <Image className={css.news__img}
                                    src={news.imageUrl}
                                    alt={news.title}
-                                   width={135}
+                                   width={250}
                                    height={100}
                             />
                             <Link className={css.news__link} href="/">

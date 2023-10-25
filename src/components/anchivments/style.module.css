@@ -13,11 +13,12 @@
 }
 .achivments__text{
     text-align: center;
-    font-size: 8px;
-    font-style: normal;
+    font-size: var(--achivment-title);
     font-weight: 700;
-    line-height: normal;
     max-width: 60px;
+}
+.achivments__meta{
+    font-size: 0;
 }
 .achivments__item:after{
     content: "";
@@ -25,9 +26,10 @@
     width: 34px;
     height: 34px;
     border-radius: 34px;
-    background-color: rgba(161, 210, 20, 0.3);
+    background-color: var(--green);
     top: 5px;
-    right: 0;
+    left: 25px;
+    z-index: -1;
 
 }
 .achivments__item:before{
@@ -52,4 +54,20 @@
 }
 .achivments__fourth:before{
     background-image: url("../../static/achivments/reservation.svg");
+}
+@media screen and (min-width: 992px) {
+    .achivments__item{
+        padding-top: 15px;
+        padding-left: 45px;
+    }
+    .achivments__text{
+        max-width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .achivments__meta{
+        font-size: var(--text);
+
+    }
+
 }

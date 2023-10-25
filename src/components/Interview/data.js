@@ -30,5 +30,34 @@ export const recipData = [
 
 
     },
+    {
+        id:4,
+        time:"15",
+        portions:4,
+        title:"Курочка BARBEQUE",
+        imgUrl:chikenSoup,
+
+
+
+    },
+    {
+        id:5,
+        time:"15",
+        portions:4,
+        title:"Курочка BARBEQUE",
+        imgUrl:chikenSoup,
+
+
+
+    },{
+        id:6,
+        time:"15",
+        portions:4,
+        title:"Курочка BARBEQUE",
+        imgUrl:chikenSoup,
+
+
+
+    },
 
 ]

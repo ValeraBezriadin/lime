@@ -14,6 +14,7 @@ import RecipSlider from "@/components/Interview/RecipSlide";
 import {dataSlider} from "@/components/Slider/data";
 import {SwiperSlide} from "swiper/react";
 import Slide from "@/components/Slider/Slide"
+import Revise from "@/components/Revise";
 
 export default function Home() {
     return (
@@ -27,9 +28,15 @@ export default function Home() {
             </Head>
             <Layout>
                 <div>
+
                     <Search/>
 
-                    <Slider>
+                    <Slider breakpoints={{
+                        320: {
+                            slidesPerView: 1,
+
+                        },
+                    }}>
                         {dataSlider.map((i)=>(
                             <SwiperSlide key={i.id}>
                                 <Slide {...i}/>
@@ -38,32 +45,32 @@ export default function Home() {
                         ))}
                     </Slider>
 
-                    {/*<Anchivments/>*/}
+                    <Anchivments/>
 
-                    {/*<News/>*/}
+                    <News/>
 
-                    {/*<Product title={"Акционные товары"} href={"/"}>*/}
-                    {/*    <ProductList data={products}/>*/}
-                    {/*</Product>*/}
-
-
-
-                    {/*<Product title={"Новинки"} href={"/"}>*/}
-                    {/*    <ProductList data={products}/>*/}
-                    {/*</Product>*/}
-
-                    {/*<Product title={"Выбор вегана"} href={"/"}>*/}
-                    {/*    <ProductList data={products}/>*/}
-                    {/*</Product>*/}
-
-                    {/*<Product title={"Популярные товары"} href={"/"}>*/}
-                    {/*    <ProductList data={products}/>*/}
-                    {/*</Product>*/}
-
-                    {/*<Interview />*/}
+                    <Product title={"Акционные товары"} href={"/"}>
+                        <ProductList data={products}/>
+                    </Product>
 
 
-                    {/*<Improvements/>*/}
+
+                    <Product title={"Новинки"} href={"/"}>
+                        <ProductList data={products}/>
+                    </Product>
+                    <Revise/>
+                    <Product title={"Выбор вегана"} href={"/"}>
+                        <ProductList data={products}/>
+                    </Product>
+
+                    <Product title={"Популярные товары"} href={"/"}>
+                        <ProductList data={products}/>
+                    </Product>
+
+                    <Interview />
+
+
+                    <Improvements/>
 
                 </div>
             </Layout>

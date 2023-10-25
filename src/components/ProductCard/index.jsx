@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import css from "./style.module.css";
 import Image from "next/image";
 import like from "@/static/like.svg"
+import {useCart} from "@/Context";
+import Popup from "@/components/UI/Popup";
 
 
 const ProductCard = ({
@@ -13,15 +15,30 @@ const ProductCard = ({
                          price,
                          slug,
                          favorite,
+                         weight,
                      }) => {
 
-
+    const [show,setShow] = useState(false)
     const newPrice = Math.round(price - price * (discount / 100))
-
-
+    const {addToCart} = useCart()
+    const handleAddToCart = ()=>{
+        const data = {
+            title:title,
+            imageUrl:imageUrl,
+            weight:weight,
+            price:discount ? newPrice : price,
+            count:1,
+        }
+        addToCart(data)
+        setShow(true)
+        setTimeout(()=>{
+            setShow(false)
+        },500)
+    }
 
     return (
         <article className={css.product}>
+            <Popup show={show}/>
             <div className={css.product__head}>
                 <button className={css.products__like}>
                     <Image src={like}
@@ -31,7 +48,8 @@ const ProductCard = ({
                     />
 
                 </button>
-                <Image src={imageUrl}
+                <Image  className={css.product__img}
+                       src={imageUrl}
                        alt={slug}
                        width={60}
                        height={105}
@@ -58,9 +76,11 @@ const ProductCard = ({
                     }
 
                 </div>
-                <button className={css.product__btn}>В корзину</button>
+                <button onClick={()=>handleAddToCart()} className={css.product__btn}>В корзину</button>
             </div>
+
         </article>
+
     );
 };
 

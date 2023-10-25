@@ -1,0 +1,170 @@
+.footer{
+    background-color: var(--grey);
+    padding: 50px 0 60px 0;
+
+
+}
+.footer__wrapper{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+
+}
+.footer__left{
+    display: flex;
+    flex-direction: column;
+}
+.footer__left_logo{
+    margin-bottom: 35px;
+    max-width: 200px;
+    width: 100%;
+}
+.footer__left_confident{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--lime);
+    line-height: normal;
+    position: relative;
+    display: inline-block;
+    text-decoration: underline var(--lime) 1px solid;
+    margin-bottom: 15px;
+}
+.footer__left_protect{
+    font-size: 12px;
+    color: var(--white);
+    font-weight: 500;
+    max-width: 260px;
+    width: 100%;
+}
+.footer__left_years{
+    font-size: 12px;
+    color: var(--white);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.footer__company{
+    display: flex;
+    flex-direction: column;
+}
+.footer__company_item{
+    margin-bottom: 20px;
+}
+.footer__company_item:first-child{
+    margin-bottom: 20px;
+}
+.footer__link_title{
+    color: var(--white);
+    font-size: 18px;
+    opacity: 0.3;
+    font-weight: 700;
+}
+.footer__link{
+    color: white;
+    font-size: var(--text);
+
+    font-weight: 500;
+}
+.footer__buyers{
+    display: flex;
+    flex-direction: column;
+}
+.footer__buyers_item{
+    margin-bottom: 20px;
+}
+.footer__buyers_item:first-child{
+    margin-bottom: 20px;
+}
+.footer__right{
+    display: flex;
+    flex-direction: column;
+}
+.footer__right_text{
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.footer__right_call{
+    color: var(--white);
+    font-size: 42px;
+    font-weight: 700;
+    position: relative;
+    padding-left:40px;
+    margin-bottom: 40px;
+
+}
+.footer__inner{
+    display: flex;
+    max-width: 385px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.footer__right_call:before{
+    content: "";
+    position: absolute;
+    background-image: url("../../../static/phoneCall.svg");
+    width: 25px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 15px;
+    left: 0;
+}
+.footer__right_btn{
+    color: var(--white);
+    font-size: 14px;
+    padding: 10px 10px 10px 60px ;
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    max-width: 240px;
+    width: 100%;
+    font-weight: 500;
+
+}
+.footer__right_appStore{
+    margin-bottom: 10px;
+    position: relative;
+}
+.footer__right_playMarcket{
+    margin-bottom: 30px;
+    position: relative;
+}
+.footer__right_appStore:after{
+    content: "";
+    position: absolute;
+    background-image: url("../../../static/appleStore.svg");
+    width: 24px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 7px;
+    left: 15px;
+
+}
+.footer__right_playMarcket:before{
+    content: "";
+    position: absolute;
+    background-image: url("../../../static/playMarket.svg");
+    width: 24px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 7px;
+    left: 15px;
+}
+.footer__right_socialMedia{
+    display: flex;
+    gap: 10px;
+}
+
+@media screen and (max-width: 992px){
+    .footer__wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+}

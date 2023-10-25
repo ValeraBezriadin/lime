@@ -109,7 +109,7 @@
     left: -340px;
     bottom: 0;
     /*width: 0;*/
-    top: 70px;
+    top: -1000%;
 
     background-color: var(--white);
 
@@ -121,10 +121,11 @@
 
 .nav__active {
     display: block;
+    top: 70px;
     right: 0;
     left: 0;
     width: 100%;
-    transition: all 1s linear;
+    transition: all 0.4s linear;
 
 }
 
@@ -147,7 +148,9 @@
 .nav__link:active{
     background-color: var(--lime);
 }
-
+.nav__textBtn{
+    font-size: 0;
+}
 .nav__name {
     padding-left: 15px;
     text-transform: lowercase;
@@ -168,14 +171,12 @@
     background-size: cover;
 }
 
-.nav__textBtn{
-    font-size: 0;
-}
+
 @media screen and (min-width: 992px){
     .nav__active{
         width: 350px;
         left: -15px;
-        transition: all 0.7s linear;
+        transition: all 0.3s linear;
     }
     .header{
         padding: 15px;
@@ -202,13 +203,15 @@
     .nav__sales_text{
         display: block;
     }
-    .nav__button{
-        display: flex;
-        align-items: center;
-    }
-    .nav__textBtn{
+    .nav__textBtn {
         font-size: 14px;
         font-weight: 700;
         padding-left: 10px;
     }
+    .nav__button{
+        display: flex;
+        align-items: center;
+    }
+
+
 }

@@ -1,6 +1,7 @@
 .improvements{
     background-color: var(--lime);
     border-radius: 10px;
+    margin-bottom: 50px;
 
 }
 .improvements__inner{
@@ -15,7 +16,7 @@
     font-weight: 700;
     line-height: 24px;
     text-transform: uppercase;
-
+    display: inline;
     width: 100%;
 }
 .improvements__list{
@@ -26,6 +27,7 @@
     align-items: center;
 }
 .improvements__text{
+    display: inline;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -55,4 +57,11 @@
 }
 .improvements__subText:first-letter{
     text-transform: uppercase;
+}
+@media screen and (min-width: 768px){
+
+    .improvements__list{
+        flex-direction: row;
+    }
+
 }

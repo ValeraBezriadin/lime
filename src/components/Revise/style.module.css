@@ -1,0 +1,147 @@
+.revise{
+    padding: 30px 0 30px 25px;
+    position: relative;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+}
+
+.revise__inner{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+
+}
+.revise__title{
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 700;
+}
+.revise__btn{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--black);
+    padding: 10px 25px;
+    background-color: var(--lime);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+}
+.revise__list{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 300px;
+
+    overflow: hidden;
+}
+.revise__item{
+    position: relative;
+}
+.revise__subtitle{
+    padding-left: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    position: relative;
+
+}
+.revise__wrapper{
+    margin-bottom: 15px;
+}
+
+.revise__icon{
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -1px;
+    left: 3px;
+    height: 14px;
+    width: 10px;
+}
+.revise__text{
+    color: var(--black);
+    font-size: 12px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+}
+.revise__link{
+    display: block;
+    position: absolute;
+    color: var(--black);
+    text-align: center;
+    bottom: -10px;
+    right: 0;
+    padding: 70px 0 15px 0 ;
+    background-image: linear-gradient(0deg, rgba(248, 248, 248, 0.54) 49.46%, rgba(248, 248, 248, 0.00) 100%);
+
+    width: 100%;
+}
+.revise__subtext{
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration-line: solid underline var(--black);}
+
+@media screen and (min-width:768px) {
+    .revise{
+        display: flex;
+        gap: 40px;
+    }
+    .revise__inner{
+        flex-direction: column;
+        width: 170px;
+        justify-content: normal;
+    }
+    .revise__list{
+        flex-direction: row;
+        overflow-y: hidden;
+        gap: 35px;
+        height: 120px;
+        max-width: 80%;
+
+    }
+    .revise__item{
+        width: 160px;
+
+    }
+    .revise__btn{
+        width: 100%;
+    }
+    .revise__link{
+        position: static;
+        width: 30px;
+    right: 0 ;
+    top: -45px;
+
+
+    }
+    .revise__subtext{
+        position: relative;
+    }
+    .revise__subtext:after{
+        content: ">";
+        position: absolute;
+        font-size: 25px;
+        color: var(--black);
+        top: -50px;
+        right: 15px;
+        width: 12px;
+        height: 12px;
+    }
+    .revise__subtext{
+        font-size: 0;
+    }
+    .revise__wrapper{
+        width: 160px;
+    }
+}
+@media screen and (min-width:330px){
+
+}

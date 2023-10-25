@@ -43,9 +43,10 @@ const Interview = () => {
             </div>
             <div className={css.recip__wrapper}>
                 <Product title={"Рецепты от шеф-лайма!"} href={"/"}>
+                    <div className={css.recip__meta}>
                     <p className={css.interview__subtitle}>Соберите все необходимые
                         продукты в один клик!</p>
-                    <Slider pagination={false} >
+                    <Slider   pagination={false} >
                         {recipData.map((i)=>(
                             <SwiperSlide key={i.id}>
                                 <RecipSlide{...i}/>
@@ -53,6 +54,7 @@ const Interview = () => {
                             </SwiperSlide>
                         ))}
                     </Slider>
+                    </div>
                 </Product>
             </div>
 
