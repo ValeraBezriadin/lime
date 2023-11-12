@@ -4,10 +4,11 @@ import Image from "next/image";
 import { useCart } from "@/Context";
 
 const CartItem = ({ title, price, imageUrl, count, id, weight }) => {
-  const { removeFromCart } = useCart();
+  const { removeFromCart, increment, decrement } = useCart();
   const handleRemoveItem = () => {
     removeFromCart(id);
   };
+
   return (
     <li className={css.item}>
       <Image
@@ -18,9 +19,25 @@ const CartItem = ({ title, price, imageUrl, count, id, weight }) => {
         height={100}
       />
       <div className={css.item__counter}>
-        <button className={css.item__count}>+</button>
+        <button
+          className={css.item__count}
+          disabled={count >= 10}
+          onClick={() => {
+            increment(id);
+          }}
+        >
+          +
+        </button>
         <span className={css.item__meta}>{count}</span>
-        <button className={css.item__count}>-</button>
+        <button
+          className={css.item__count}
+          disabled={count <= 1}
+          onClick={() => {
+            decrement(id);
+          }}
+        >
+          -
+        </button>
       </div>
       <div className={css.item__info}>
         <p className={css.item__title}>{title}</p>

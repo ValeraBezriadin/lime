@@ -10,20 +10,6 @@ function saveCartToLocalStorage(cart) {
 
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
-  const addToCart = (item) => {
-    setCart((prevCart) => {
-      const newCart = [...prevCart, item];
-      saveCartToLocalStorage(newCart);
-      return newCart;
-    });
-  };
-  const removeFromCart = (i) => {
-    setCart((prevCart) => {
-      const updatedCart = prevCart.filter((item) => item.id !== i);
-      saveCartToLocalStorage(updatedCart);
-      return updatedCart;
-    });
-  };
   useEffect(() => {
     const cartData = localStorage.getItem("cart");
     if (cartData) {
@@ -35,9 +21,61 @@ export function CartProvider({ children }) {
   useEffect(() => {
     saveCartToLocalStorage(cart);
   }, [cart]);
+  const addToCart = (item) => {
+    setCart((prevCart) => {
+      const double = prevCart.find((cartItem) => cartItem.id === item.id);
+      if (double) {
+        const updatedCart = prevCart.map((cartItem) => {
+          if (cartItem.id === item.id) {
+            return { ...cartItem, count: item.count + 1 };
+          }
+          return cartItem;
+        });
+        saveCartToLocalStorage(updatedCart);
+        return updatedCart;
+      }
+      else {
+        const newCart = [...prevCart, item];
+        saveCartToLocalStorage(newCart);
+        return newCart;
+      }
 
+      
+    });
+  };
+  
+  const removeFromCart = (i) => {
+    setCart((prevCart) => {
+      const updatedCart = prevCart.filter((item) => item.id !== i);
+      saveCartToLocalStorage(updatedCart);
+      return updatedCart;
+    });
+  };
+
+  const increment = (itemId) => {
+    setCart((prevCart) => {
+      const updatedCart = prevCart.map((item) => {
+        if (item.id === itemId) {
+          return { ...item, count: item.count + 1 };
+        }
+      });
+      return updatedCart;
+    });
+  };
+  const decrement = (itemId) => {
+    setCart((prevCart) => {
+      const upDateCart = prevCart.map((item) => {
+        if (item.id === itemId) {
+          return { ...item, count: item.count - 1 };
+        }
+      });
+      return upDateCart;
+    });
+  };
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, increment, decrement }}
+    >
       {children}
     </CartContext.Provider>
   );

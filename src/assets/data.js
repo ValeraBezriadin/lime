@@ -1,8 +1,7 @@
-import pasta from "@/static/product/productSugar.png";
-import water from "@/static/product/productWater.png";
+import pasta from "@/static/product/productWater.png";
 import { v4 as uuidv4 } from "uuid";
 
-export const products = [
+export const newProducts = [
   {
     id: uuidv4(),
     title: "Макаронные изделия Макфа Триколлини свитки",

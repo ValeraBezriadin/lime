@@ -14,7 +14,7 @@ const Cart = () => {
 
   const { cart } = useCart();
 
-  console.log(cart);
+  console.log("корзина",cart);
   return (
     <div className={css.card}>
       <button className={css.cart__button} onClick={() => handleCart()}>
