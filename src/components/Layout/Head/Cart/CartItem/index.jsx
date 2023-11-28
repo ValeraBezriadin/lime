@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useCart } from "@/Context";
 
 const CartItem = ({ title, price, imageUrl, count, id, weight }) => {
+  const currentPrice = price * count;
+  const currentWeight = weight * count;
   const { removeFromCart, increment, decrement } = useCart();
   const handleRemoveItem = () => {
     removeFromCart(id);
@@ -41,8 +43,8 @@ const CartItem = ({ title, price, imageUrl, count, id, weight }) => {
       </div>
       <div className={css.item__info}>
         <p className={css.item__title}>{title}</p>
-        <span className={css.item__price}>{price}грн.</span>
-        <span className={css.item__weight}>{weight}г.</span>
+        <span className={css.item__price}>{currentPrice}грн.</span>
+        <span className={css.item__weight}>{currentWeight}г.</span>
       </div>
       <button className={css.item__delete} onClick={handleRemoveItem}>
         x{" "}

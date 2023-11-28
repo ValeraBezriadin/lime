@@ -26,24 +26,22 @@ export function CartProvider({ children }) {
       const double = prevCart.find((cartItem) => cartItem.id === item.id);
       if (double) {
         const updatedCart = prevCart.map((cartItem) => {
-          if (cartItem.id === item.id) {
-            return { ...cartItem, count: item.count + 1 };
+          if (cartItem.id == item.id) {
+            const updateCount = cartItem.count <= 9 ? cartItem.count + 1 : cartItem.count;
+            return { ...cartItem, count: updateCount };
           }
           return cartItem;
         });
         saveCartToLocalStorage(updatedCart);
         return updatedCart;
-      }
-      else {
+      } else {
         const newCart = [...prevCart, item];
         saveCartToLocalStorage(newCart);
         return newCart;
       }
-
-      
     });
   };
-  
+
   const removeFromCart = (i) => {
     setCart((prevCart) => {
       const updatedCart = prevCart.filter((item) => item.id !== i);
@@ -55,10 +53,12 @@ export function CartProvider({ children }) {
   const increment = (itemId) => {
     setCart((prevCart) => {
       const updatedCart = prevCart.map((item) => {
-        if (item.id === itemId) {
+        if (item && item.id === itemId) {
           return { ...item, count: item.count + 1 };
         }
+      return item
       });
+      saveCartToLocalStorage(updatedCart);
       return updatedCart;
     });
   };
@@ -68,7 +68,9 @@ export function CartProvider({ children }) {
         if (item.id === itemId) {
           return { ...item, count: item.count - 1 };
         }
+        return item
       });
+      saveCartToLocalStorage(upDateCart);
       return upDateCart;
     });
   };

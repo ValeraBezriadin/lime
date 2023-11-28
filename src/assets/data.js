@@ -25,6 +25,7 @@ export const newProducts = [
     weight: 450,
     slug: "pasta",
     favorite: false,
+    
   },
   {
     id: uuidv4(),

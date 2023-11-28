@@ -25,6 +25,7 @@
   --product-text:10px;
   --product-price:11px;
   --product-old-price:8px;
+  --subvert-text:14px;
 
 
 }
@@ -49,6 +50,8 @@
 }
 form, label, input {
   font-size: var(--text);
+  outline: none;
+  border: none;
 }
 * {
   box-sizing: border-box;
